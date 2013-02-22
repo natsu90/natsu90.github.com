@@ -4,32 +4,30 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Mohd Sulaiman Bin Sudirman</title>
-	<link rel="stylesheet" href="assets/css/lib.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<title>jQuery Easy Background Resize Plug-In</title>
+	<link rel="stylesheet" href="css/lib.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<!-- Google Hosted jQuery Core -->
 	<script src="http://www.google.com/jsapi"></script>
 	<script>google.load("jquery", "1");</script>
-	<script src="assets/js/jquery.ez-bg-resize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.ez-bg-resize.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		$(document).ready(function() {
+			
+			var BGImageArray = ["bg.jpg","bg2.jpg","bg3.jpg","bg4.jpg","bg5.jpg","bg6.jpg","bg7.jpg","bg8.jpg"];
+			var BGImage = BGImageArray[Math.floor(Math.random()*BGImageArray.length)]
+
 			$("body").ezBgResize({
-				img     : "assets/image/bg11.jpg", // Relative path example.  You could also use an absolute url (http://...).
+				img     : "image/" + BGImage, // Relative path example.  You could also use an absolute url (http://...).
 				opacity : 1, // Opacity. 1 = 100%.  This is optional.
-				center  : false // Boolean (true or false). This is optional. Default is true.
+				center  : true // Boolean (true or false). This is optional. Default is true.
 			});
 		});
 	</script>
 </head>
 <body>
 	<div id="container">
-		<h1>Mohd Sulaiman Bin Sudirman</h1>
-		<p>mohd.sulaiman (at) sudirman.info</p>
-		
-		<p><u>Chief Technical Officer at Derp Resources</u></p>
-		<p><s>IT Programmer at Asia e University <br>(Dec 2011 - Dec 2012)</s></p>
-		<p><s>Analyst Programmer at Hesper Technology <br>(Aug 2011 - Nov 2011)</s></p>
-		<p><s>Research Assistant at Universiti Kebangsaan Malaysia <br>(June 2011 - July 2011)</s></p>
-		<!--
+		<h1>jQuery Easy Background Resize</h1>
+		<p>Resizable full-browser background image using jQuery.  Implementation requires no CSS.  Keeps the images aspect ratio in tact!</p>
 		<p class="title">Example Example jQuery Code</p>
 		<p class="code">
 			$.ezBgResize({<br />
@@ -41,11 +39,10 @@
 		<p class="left">That's it!  Super simple!!!</p>
 		<p class="left">Don't forget to include jQuery and the source plugin script!</p>
 		<p class="left">Hope you like it!</p>
-		-->
 	</div>
 	
 	<div id="credit">
-		<a href="http://github.com/natsu90"><img src="assets/image/github.png"/></a>
+		Background image courtesy of: <a href="http://www.socwall.com/browse/index.php?search=Bear+Country">socwall.com</a>
 	</div>
 </body>
 </html>
